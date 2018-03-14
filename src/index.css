@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+button:hover {
+  cursor: hand;
+}
+
+#tracks-container {
+  text-align: left;
+}
+
+#tracks-container span {
+  font-weight: bold;
+}
