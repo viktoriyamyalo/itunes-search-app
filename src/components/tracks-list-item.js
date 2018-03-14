@@ -11,12 +11,15 @@ class TracksListItem extends Component {
     render() {
 
         let track = this.props.track;
-        let trackDuration = new Date(track.trackTimeMillis);
-        trackDuration = `${trackDuration.getUTCMinutes()}:${trackDuration.getUTCSeconds()}`;
+        
+        // calculate track duration based on milliseconds
+        let trackMinutes = Math.floor(track.trackTimeMillis / 60000); 
+        let trackSeconds = ((track.trackTimeMillis % 60000) / 1000).toFixed(0);
+        let trackDuration = trackSeconds < 10 ? `${trackMinutes}:0${trackSeconds}` : `${trackMinutes}:${trackSeconds}`;
 
         if(this.props.selectedTrack.selectedTrack && this.props.selectedTrack.selectedTrack.trackId === track.trackId) {
             return (
-            <div onClick={this.props.selectTrack.bind(this, track)} className="container">
+            <div onClick={this.props.selectTrack.bind(this, track)} className="container" style={style}>
 
                 <div className="row">
                     <div className="col-md-2">
@@ -60,11 +63,11 @@ class TracksListItem extends Component {
                     <div className="col-md-4">
                         <p><span>Collection:</span> {track.collectionCensoredName}</p>
                         <p><span>Track Count:</span> {track.trackCount}</p>
-                        <p><span>Price:</span> {track.collectionPrice} USD</p>
+                        <p><span>Price:</span> {track.collectionPrice} {track.currency}</p>
                     </div>
                     <div className="col-md-4">
                         <p><span>Track Duration:</span> {trackDuration} min</p>
-                        <p><span>Track Price:</span> {track.trackPrice} USD</p>
+                        <p><span>Track Price:</span> {track.trackPrice} {track.currency}</p>
                     </div>
                     <div className="col-md-2"></div>
                 </div>
@@ -75,7 +78,7 @@ class TracksListItem extends Component {
         }
 
         return (
-            <div onClick={this.props.selectTrack.bind(this, track)} className="container">
+            <div onClick={this.props.selectTrack.bind(this, track)} className="container" style={style}>
 
                 <div className="row">
                     <div className="col-md-2">
@@ -106,6 +109,15 @@ class TracksListItem extends Component {
             
             );
     }
+}
+
+const style = {
+    borderRadius: 4,
+    borderBottom: '1px solid grey',
+    borderRight: '1px solid grey',
+    textAlign: 'left',
+    width: '100%',
+    padding: 5
 }
 
 const mapStateToProps = (state) => { 

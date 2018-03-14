@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   font-size: 14px;
-  background-color: aquamarine;
+  background-color: #BABC94;
 }
 
 input {
@@ -12,10 +12,6 @@ input {
 
 button:hover {
   cursor: hand;
-}
-
-#tracks-container {
-  text-align: left;
 }
 
 #tracks-container span {
@@ -29,12 +25,7 @@ button:hover {
 }
 
 #tracks-container .container:nth-child(even) {
-  background-color: antiquewhite;
+  background-color: #E5DFCF;
 }
 
-#tracks-container .container {
-  width: 100%;
-  padding: 5px;
-  margin: 5px;
-}
 
