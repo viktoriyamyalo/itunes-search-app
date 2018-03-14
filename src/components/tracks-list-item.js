@@ -47,13 +47,12 @@ class TracksListItem extends Component {
                 <div className="row">
                     
                     <div className="col-md-2"></div>
-                    <div className="col-md-4">
+                    <div className="col-md-10">
                         <h5>
                             {track.artistName}: {track.trackCensoredName}
                             <TiNotes />
                         </h5>
                     </div>
-                    <div className="col-md-6"></div>
                 </div>
 
                 <div className="row">
@@ -61,7 +60,7 @@ class TracksListItem extends Component {
                     <div className="col-md-4">
                         <p><span>Collection:</span> {track.collectionCensoredName}</p>
                         <p><span>Track Count:</span> {track.trackCount}</p>
-                        <p>Price: {track.collectionPrice} USD</p>
+                        <p><span>Price:</span> {track.collectionPrice} USD</p>
                     </div>
                     <div className="col-md-4">
                         <p><span>Track Duration:</span> {trackDuration} min</p>

@@ -21,7 +21,7 @@ class TracksList extends Component {
                         <div className="col-md-2">Artist</div>
                         <div className="col-md-2">Track</div>
                         <div className="col-md-2">Collection</div>
-                        <div className="col-md-2">genre</div>
+                        <div className="col-md-2">Genre</div>
                         <div className="col-md-2"></div>
                     </div>
                 </div>
@@ -31,8 +31,8 @@ class TracksList extends Component {
         
 
         return (
-            <div>
-            Please search for some tracks!
+            <div className="container">
+            Search for some of your favorite tracks to see them here!
             </div>
         );
     }
