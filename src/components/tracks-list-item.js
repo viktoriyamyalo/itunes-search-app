@@ -22,27 +22,27 @@ class TracksListItem extends Component {
             <div onClick={this.props.selectTrack.bind(this, track)} className="container" style={style}>
 
                 <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         <img src={track.artworkUrl60} alt={track.collectionCensoredName} />
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.artistName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.trackCensoredName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.collectionCensoredName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.primaryGenreName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         <TiMinus />
                     </div>
                 </div>
@@ -51,10 +51,10 @@ class TracksListItem extends Component {
                     
                     <div className="col-md-2"></div>
                     <div className="col-md-10">
-                        <h5>
+                        <h4>
                             {track.artistName}: {track.trackCensoredName}
                             <TiNotes />
-                        </h5>
+                        </h4>
                     </div>
                 </div>
 
@@ -81,27 +81,27 @@ class TracksListItem extends Component {
             <div onClick={this.props.selectTrack.bind(this, track)} className="container" style={style}>
 
                 <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         <img src={track.artworkUrl60} alt={track.collectionCensoredName} />
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.artistName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.trackCensoredName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.collectionCensoredName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         {track.primaryGenreName}
                     </div>
 
-                    <div className="col-md-2">
+                    <div className="col-sm-2">
                         <TiPlus />
                     </div>
                 </div>
@@ -113,11 +113,9 @@ class TracksListItem extends Component {
 
 const style = {
     borderRadius: 4,
-    borderBottom: '1px solid grey',
-    borderRight: '1px solid grey',
     textAlign: 'left',
     width: '100%',
-    padding: 5
+    padding: 5,
 }
 
 const mapStateToProps = (state) => { 

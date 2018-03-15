@@ -8,7 +8,7 @@ class TracksList extends Component {
     // call getTracks once the component mounts so that the page 
     // gets initially populated with tracks
     componentDidMount() {
-        this.props.getTracks('beetles');
+        this.props.getTracks('The Beatles');
     }
 
     render() {
@@ -20,16 +20,16 @@ class TracksList extends Component {
 
             return (
             <div className="container container-fluid" id="tracks-container" style={style}>
-                <div className="container">
+                <div className="container" id="tracks-headers-container">
                     <div className="row">
-                        <div className="col-md-2"></div>
-                        <div className="col-md-2">Artist</div>
-                        <div className="col-md-2">Track</div>
-                        <div className="col-md-2">Collection</div>
-                        <div className="col-md-2">Genre</div>
-                        <div className="col-md-2"></div>
+                        <div className="col-sm-2"></div>
+                        <div className="col-sm-2">Artist</div>
+                        <div className="col-sm-2">Track</div>
+                        <div className="col-sm-2">Collection</div>
+                        <div className="col-sm-2">Genre</div>
+                        <div className="col-sm-2"></div>
                     </div>
-                </div>
+                </div> 
                 {tracks}
             </div>);
             }

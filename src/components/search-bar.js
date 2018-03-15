@@ -18,17 +18,21 @@ class SearchBar extends Component {
         return (
             
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <form onSubmit={handleSubmit(this.onGetTracks.bind(this))}>    
-                                <Field name="search" component={renderField} type="text" placeholder="Start searching for tracks..." />
-                                
-                                    <button type="submit" disabled={pristine || submitting} className="btn btn-primary">
-                                        Search <MdSearch />
-                                    </button>
-                            </form>
-                        </div>
-                    </div>
+                        <form onSubmit={handleSubmit(this.onGetTracks.bind(this))}> 
+                            <div className="row"> 
+                                <div className="col-md-12">  
+                                    <div className="input-group">
+                                        <Field name="search" component={renderField} className="form-control" type="text" placeholder="Start searching for tracks" />
+                                        
+                                        <span className="input-group-btn">
+                                            <button type="submit" disabled={pristine || submitting} className="btn btn-default">
+                                                <MdSearch />
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                 </div>
         );
     }
@@ -37,10 +41,11 @@ class SearchBar extends Component {
 const renderField = ({
     input,
     type,
-    placeholder
+    placeholder,
+    className
   }) => (
       <div>
-        <input {...input} type={type} placeholder={placeholder}/>
+        <input {...input} type={type} placeholder={placeholder} className={className}/>
       </div>
   );
 

@@ -6,12 +6,8 @@ body {
   background-color: #BABC94;
 }
 
-input {
-  margin: 5px;
-}
-
 button:hover {
-  cursor: hand;
+  cursor: pointer;
 }
 
 #tracks-container span {
@@ -28,4 +24,26 @@ button:hover {
   background-color: #E5DFCF;
 }
 
+#tracks-container .container:hover {
+  background-color: #9FA659;
+  cursor: pointer;
+}
+
+#tracks-container #tracks-headers-container :hover {
+  background-color: #BABC94;
+  cursor: default;
+}
+
+.input-group {
+  width: 250px;
+  margin: 5px auto;
+}
+
+.input-group .form-control {
+  border-radius: 4px 0 0 4px !important;
+}
+
+.col {
+  min-width: 50px
+}
 
