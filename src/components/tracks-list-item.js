@@ -115,7 +115,7 @@ const style = {
     borderRadius: 4,
     textAlign: 'left',
     width: '100%',
-    padding: 5,
+    padding: 5
 }
 
 const mapStateToProps = (state) => { 

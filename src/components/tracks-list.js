@@ -46,7 +46,7 @@ class TracksList extends Component {
 const style = {
     marginTop: 20,
     textAlign: 'left',
-    padding: 5
+    padding: '5px 0'
 };
 
 const mapStateToProps = (state) => { 
